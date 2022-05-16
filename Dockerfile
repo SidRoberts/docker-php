@@ -1,4 +1,4 @@
-FROM php:8.0.1-fpm-alpine
+FROM php:8.1.6-fpm-alpine
 
 COPY install.sh /install.sh
 
