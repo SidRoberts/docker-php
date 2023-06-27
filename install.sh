@@ -3,6 +3,7 @@
 set -e
 
 apk add --no-cache \
+	linux-headers \
 	postgresql-libs \
 	postgresql-dev \
 
@@ -12,4 +13,6 @@ docker-php-ext-install \
 
 docker-php-ext-install sockets
 
-apk del postgresql-dev
+apk del \
+	linux-headers \
+	postgresql-dev
