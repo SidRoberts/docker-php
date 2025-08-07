@@ -2,10 +2,14 @@
 
 set -e
 
+apk add --no-cache icu-dev
+
+docker-php-ext-install intl
+
 apk add --no-cache \
 	linux-headers \
 	postgresql-libs \
-	postgresql-dev \
+	postgresql-dev
 
 docker-php-ext-install \
 	pgsql \
