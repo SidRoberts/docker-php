@@ -2,6 +2,9 @@
 
 set -e
 
+# Check intl extension is installed
+php -r "in_array('intl', get_loaded_extensions()) || exit(1);"
+
 # Check Postgres extensions are installed
 php -r "in_array('pgsql', get_loaded_extensions()) || exit(1);"
 php -r "in_array('pdo_pgsql', get_loaded_extensions()) || exit(1);"
